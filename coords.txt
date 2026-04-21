@@ -1,0 +1,56 @@
+
+    <g transform="translate(560.87, 407.03)" className="map-marker" style={{ zIndex: 10 }}>
+      <circle cx="0" cy="0" r="4" fill="#C01A1A" />
+      <circle cx="0" cy="0" r="4" fill="#C01A1A" className="ping-dot" />
+      <text x="0" y="16" fill="white" fontSize="11px" textAnchor="middle" style={{ pointerEvents: 'none', textShadow: '0 1px 3px rgba(0,0,0,0.8)' }}>
+        Torreón
+      </text>
+    </g>
+
+    <g transform="translate(677.90, 413.51)" className="map-marker" style={{ zIndex: 10 }}>
+      <circle cx="0" cy="0" r="4" fill="#C01A1A" />
+      <circle cx="0" cy="0" r="4" fill="#C01A1A" className="ping-dot" />
+      <text x="0" y="16" fill="white" fontSize="11px" textAnchor="middle" style={{ pointerEvents: 'none', textShadow: '0 1px 3px rgba(0,0,0,0.8)' }}>
+        Saltillo
+      </text>
+    </g>
+
+    <g transform="translate(581.29, 395.05)" className="map-marker" style={{ zIndex: 10 }}>
+      <circle cx="0" cy="0" r="4" fill="#C01A1A" />
+      <circle cx="0" cy="0" r="4" fill="#C01A1A" className="ping-dot" />
+      <text x="0" y="16" fill="white" fontSize="11px" textAnchor="middle" style={{ pointerEvents: 'none', textShadow: '0 1px 3px rgba(0,0,0,0.8)' }}>
+        San Pedro
+      </text>
+    </g>
+
+    <g transform="translate(569.45, 407.88)" className="map-marker" style={{ zIndex: 10 }}>
+      <circle cx="0" cy="0" r="4" fill="#C01A1A" />
+      <circle cx="0" cy="0" r="4" fill="#C01A1A" className="ping-dot" />
+      <text x="0" y="16" fill="white" fontSize="11px" textAnchor="middle" style={{ pointerEvents: 'none', textShadow: '0 1px 3px rgba(0,0,0,0.8)' }}>
+        Matamoros
+      </text>
+    </g>
+
+    <g transform="translate(556.94, 406.05)" className="map-marker" style={{ zIndex: 10 }}>
+      <circle cx="0" cy="0" r="4" fill="#C01A1A" />
+      <circle cx="0" cy="0" r="4" fill="#C01A1A" className="ping-dot" />
+      <text x="0" y="16" fill="white" fontSize="11px" textAnchor="middle" style={{ pointerEvents: 'none', textShadow: '0 1px 3px rgba(0,0,0,0.8)' }}>
+        Gómez Palacio
+      </text>
+    </g>
+
+    <g transform="translate(555.25, 407.53)" className="map-marker" style={{ zIndex: 10 }}>
+      <circle cx="0" cy="0" r="4" fill="#C01A1A" />
+      <circle cx="0" cy="0" r="4" fill="#C01A1A" className="ping-dot" />
+      <text x="0" y="16" fill="white" fontSize="11px" textAnchor="middle" style={{ pointerEvents: 'none', textShadow: '0 1px 3px rgba(0,0,0,0.8)' }}>
+        Lerdo
+      </text>
+    </g>
+
+    <g transform="translate(500.78, 487.48)" className="map-marker" style={{ zIndex: 10 }}>
+      <circle cx="0" cy="0" r="4" fill="#C01A1A" />
+      <circle cx="0" cy="0" r="4" fill="#C01A1A" className="ping-dot" />
+      <text x="0" y="16" fill="white" fontSize="11px" textAnchor="middle" style={{ pointerEvents: 'none', textShadow: '0 1px 3px rgba(0,0,0,0.8)' }}>
+        Durango
+      </text>
+    </g>
