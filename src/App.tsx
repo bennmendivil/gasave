@@ -44,7 +44,7 @@ function App() {
           <p style={{ maxWidth: '500px', margin: '0 auto var(--space-6)' }}>
             Laboratorio especializado en concreto y mecánica de suelos. Tu mejor aliado para el control de calidad en proyectos de construcción.
           </p>
-          <div className="flex justify-center gap-6" style={{ marginBottom: 'var(--space-6)' }}>
+          <div className="footer-nav" style={{ marginBottom: 'var(--space-6)' }}>
             <a href="#servicios" style={{ transition: 'color var(--transition-fast)' }} onMouseEnter={(e) => e.currentTarget.style.color='var(--text-heading)'} onMouseLeave={(e) => e.currentTarget.style.color='rgba(255, 255, 255, 0.7)'}>Servicios</a>
             <a href="#proceso" style={{ transition: 'color var(--transition-fast)' }} onMouseEnter={(e) => e.currentTarget.style.color='var(--text-heading)'} onMouseLeave={(e) => e.currentTarget.style.color='rgba(255, 255, 255, 0.7)'}>Proceso</a>
             <a href="#beneficios" style={{ transition: 'color var(--transition-fast)' }} onMouseEnter={(e) => e.currentTarget.style.color='var(--text-heading)'} onMouseLeave={(e) => e.currentTarget.style.color='rgba(255, 255, 255, 0.7)'}>Beneficios</a>
@@ -63,6 +63,20 @@ function App() {
       </FadeInSection>
       
       <WhatsAppButton />
+      <style>{`
+        .footer-nav {
+           display: flex;
+           justify-content: center;
+           gap: var(--space-6);
+        }
+        @media (max-width: 768px) {
+           .footer-nav {
+              flex-wrap: wrap !important;
+              gap: var(--space-4) !important;
+              padding: 0 var(--space-4) !important;
+           }
+        }
+      `}</style>
     </div>
   );
 }

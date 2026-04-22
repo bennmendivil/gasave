@@ -55,7 +55,7 @@ const CTA = () => {
             zIndex: 0
           }} />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12" style={{ position: 'relative', zIndex: 1 }}>
+          <div className="grid contact-mobile-fix gap-12" style={{ position: 'relative', zIndex: 1 }}>
             
             {/* Left Column - Contact Info */}
             <div>
@@ -81,7 +81,7 @@ const CTA = () => {
                   </div>
                   <div>
                     <span style={{ display: 'block', fontSize: '0.85rem', color: 'var(--text-muted)' }}>Escríbenos</span>
-                    <strong style={{ fontSize: '1.1rem' }}>gasavelaboratorio@gmail.com</strong>
+                    <strong style={{ fontSize: '13px', wordBreak: 'break-word', display: 'block' }}>gasavelaboratorio@gmail.com</strong>
                   </div>
                 </div>
 
@@ -101,6 +101,7 @@ const CTA = () => {
             {/* Right Column - Contact Form */}
             <div>
               <form 
+                className="contact-form-wrapper"
                 style={{
                   backgroundColor: 'var(--bg-card)',
                   border: '1px solid var(--border-color)',
@@ -113,17 +114,17 @@ const CTA = () => {
                 
                 <div style={{ marginBottom: 'var(--space-4)' }}>
                   <label htmlFor="nombre" style={{ display: 'block', marginBottom: 'var(--space-1)', fontSize: '0.9rem', fontWeight: 600 }}>Nombre Completo</label>
-                  <input id="nombre" name="nombre" type="text" placeholder="Ej. Juan Pérez" required style={{ width: '100%', padding: '0.75rem', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-color)', outline: 'none', fontFamily: 'inherit', backgroundColor: 'var(--bg-main)', color: 'var(--text-main)' }} />
+                  <input id="nombre" name="nombre" type="text" placeholder="Ej. Juan Pérez" required style={{ width: '100%', padding: '12px 16px', minHeight: '48px', fontSize: '16px', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-color)', outline: 'none', fontFamily: 'inherit', backgroundColor: 'var(--bg-main)', color: 'var(--text-main)' }} />
                 </div>
                 
                 <div style={{ marginBottom: 'var(--space-4)' }}>
                   <label htmlFor="email" style={{ display: 'block', marginBottom: 'var(--space-1)', fontSize: '0.9rem', fontWeight: 600 }}>Correo Electrónico</label>
-                  <input id="email" name="email" type="email" placeholder="juan@constructora.com" required style={{ width: '100%', padding: '0.75rem', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-color)', outline: 'none', fontFamily: 'inherit', backgroundColor: 'var(--bg-main)', color: 'var(--text-main)' }} />
+                  <input id="email" name="email" type="email" placeholder="juan@constructora.com" required style={{ width: '100%', padding: '12px 16px', minHeight: '48px', fontSize: '16px', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-color)', outline: 'none', fontFamily: 'inherit', backgroundColor: 'var(--bg-main)', color: 'var(--text-main)' }} />
                 </div>
 
                 <div style={{ marginBottom: 'var(--space-4)' }}>
                   <label htmlFor="servicio" style={{ display: 'block', marginBottom: 'var(--space-1)', fontSize: '0.9rem', fontWeight: 600 }}>Servicio de Interés</label>
-                  <select id="servicio" name="servicio" required style={{ width: '100%', padding: '0.75rem', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-color)', outline: 'none', fontFamily: 'inherit', backgroundColor: 'var(--bg-main)', color: 'var(--text-main)' }}>
+                  <select id="servicio" name="servicio" required style={{ width: '100%', padding: '12px 16px', minHeight: '48px', fontSize: '16px', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-color)', outline: 'none', fontFamily: 'inherit', backgroundColor: 'var(--bg-main)', color: 'var(--text-main)' }}>
                     <option value="">Selecciona una opción</option>
                     <option value="Laboratorio de Concreto">Laboratorio de Concreto</option>
                     <option value="Mecánica de Suelos">Mecánica de Suelos</option>
@@ -144,7 +145,7 @@ const CTA = () => {
                   </div>
                 )}
 
-                <button type="submit" disabled={status === 'submitting'} className="btn btn-primary" style={{ width: '100%', opacity: status === 'submitting' ? 0.7 : 1, cursor: status === 'submitting' ? 'not-allowed' : 'pointer' }}>
+                <button type="submit" disabled={status === 'submitting'} style={{ width: '100%', opacity: status === 'submitting' ? 0.7 : 1, cursor: status === 'submitting' ? 'not-allowed' : 'pointer', backgroundColor: '#C01A1A', color: '#FFFFFF', borderRadius: 'var(--radius-md)', padding: '14px', textAlign: 'center', border: 'none', fontSize: '16px', fontWeight: 'bold' }}>
                   {status === 'submitting' ? 'Enviando...' : 'Enviar Solicitud'}
                 </button>
               </form>
@@ -153,6 +154,30 @@ const CTA = () => {
           </div>
         </div>
       </div>
+      <style>{`
+        .contact-mobile-fix {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        @media (max-width: 768px) {
+          #contacto {
+            padding-top: 120px !important;
+            padding-left: 16px !important;
+            padding-right: 16px !important;
+          }
+          .contact-mobile-fix {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: var(--space-8) !important;
+          }
+          #contacto h2 {
+            font-size: 2rem !important;
+            line-height: 1.3 !important;
+          }
+          .contact-form-wrapper {
+            padding: var(--space-5) var(--space-4) !important;
+          }
+        }
+      `}</style>
     </section>
   );
 };

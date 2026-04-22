@@ -31,7 +31,7 @@ const Benefits = () => {
       {/* Background Image Overlay */}
       <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, backgroundImage: 'url(/tamiz2.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.12, zIndex: 0, pointerEvents: 'none' }}></div>
       <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="grid gap-12 items-center benefits-mobile-fix">
           
           {/* Left Column - Text Content */}
           <div>
@@ -99,6 +99,25 @@ const Benefits = () => {
 
         </div>
       </div>
+      <style>{`
+        .benefits-mobile-fix {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        @media (max-width: 768px) {
+          #beneficios {
+            padding-top: 120px !important; /* Corrects top padding as requested */
+          }
+          .benefits-mobile-fix {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-8);
+          }
+          #beneficios h2 {
+            font-size: 1.8rem;
+            line-height: 1.3;
+          }
+        }
+      `}</style>
     </section>
   );
 };

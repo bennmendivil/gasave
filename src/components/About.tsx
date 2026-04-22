@@ -14,7 +14,7 @@ const About = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           {/* Misión */}
-          <div className="card" style={{ display: 'flex', flexDirection: 'column', border: '1px solid var(--accent)', position: 'relative', overflow: 'hidden' }}>
+          <div className="card" style={{ border: '1px solid var(--accent)', position: 'relative', overflow: 'hidden', height: '100%' }}>
             <div style={{ position: 'absolute', top: 0, left: 0, width: '4px', height: '100%', backgroundColor: 'var(--accent)' }}></div>
             
             <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-3)', marginBottom: 'var(--space-4)' }}>
@@ -23,13 +23,13 @@ const About = () => {
               </div>
               <h3 style={{ fontSize: '1.5rem', margin: 0 }}>Misión</h3>
             </div>
-            <p style={{ color: 'var(--text-main)', fontStyle: 'italic', lineHeight: 1.7, flexGrow: 1 }}>
-              "Proporcionar constantemente un servicio de alta calidad y excelencia operativa a través de la aplicación de procesos estandarizados y eficientes en todas las áreas funcionales, trabajar con compromiso a la mejora continua y proporcionar un alto nivel de transparencia de datos para gestionar eficazmente la calidad del servicio y tomar las decisiones correctas."
+            <p style={{ color: 'var(--text-main)', marginBottom: 'var(--space-4)', lineHeight: 1.7 }}>
+              Proporcionar constantemente un servicio de alta calidad y excelencia operativa a través de la aplicación de procesos estandarizados y eficientes en todas las áreas funcionales, trabajar con compromiso a la mejora continua y proporcionar un alto nivel de transparencia de datos para gestionar eficazmente la calidad del servicio y tomar las decisiones correctas.
             </p>
           </div>
 
           {/* Visión */}
-          <div className="card" style={{ display: 'flex', flexDirection: 'column', border: '1px solid var(--accent)', position: 'relative', overflow: 'hidden' }}>
+          <div className="card" style={{ border: '1px solid var(--accent)', position: 'relative', overflow: 'hidden', height: '100%' }}>
             <div style={{ position: 'absolute', top: 0, left: 0, width: '4px', height: '100%', backgroundColor: 'var(--accent)' }}></div>
             
             <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-3)', marginBottom: 'var(--space-4)' }}>
@@ -38,8 +38,8 @@ const About = () => {
               </div>
               <h3 style={{ fontSize: '1.5rem', margin: 0 }}>Visión</h3>
             </div>
-            <p style={{ color: 'var(--text-main)', fontStyle: 'italic', lineHeight: 1.7, flexGrow: 1 }}>
-              "Ser un laboratorio de referencia en la industria de la construcción, reconocido por su excelencia en la calidad y servicio, proporcionando soluciones confiables y precisas."
+            <p style={{ color: 'var(--text-main)', marginBottom: 'var(--space-4)', lineHeight: 1.7 }}>
+              Ser un laboratorio de referencia en la industria de la construcción, reconocido por su excelencia en la calidad y servicio, proporcionando soluciones confiables y precisas.
             </p>
           </div>
         </div>

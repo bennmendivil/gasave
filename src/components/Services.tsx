@@ -84,15 +84,13 @@ const Services = () => {
               >
                 {/* Frente de la tarjeta */}
                 <div 
-                  className="card flip-face"
+                  className="card flip-face front-face-card"
                   style={{
                     gridArea: '1 / 1',
                     WebkitBackfaceVisibility: 'hidden',
                     backfaceVisibility: 'hidden',
                     display: 'flex',
                     flexDirection: 'column',
-                    alignItems: 'flex-start',
-                    padding: 'var(--space-6)',
                     margin: 0,
                     overflow: 'hidden'
                   }}
@@ -107,8 +105,6 @@ const Services = () => {
                       alignItems: 'center',
                       justifyContent: 'center',
                       marginBottom: 'var(--space-4)',
-                      marginTop: '0',
-                      marginLeft: '0',
                       boxShadow: 'inset 0 0 10px rgba(255,255,255,0.05)'
                     }}
                   >
@@ -125,8 +121,6 @@ const Services = () => {
                       height: '4px',
                       backgroundColor: 'var(--accent)',
                       borderRadius: 'var(--radius-full)',
-                      marginLeft: '0',
-                      marginBottom: '0',
                       transition: 'width 0.3s'
                     }}
                     className="accent-line"
@@ -181,6 +175,11 @@ const Services = () => {
         .feature-text {
            font-size: 0.9rem;
         }
+        .front-face-card {
+           align-items: flex-start;
+           text-align: left;
+           padding: var(--space-6);
+        }
         
         @media (max-width: 768px) {
            /* Ajuste para pantallas pequeñas (móviles) */
@@ -189,6 +188,11 @@ const Services = () => {
            }
            .feature-text {
               font-size: 12px;
+           }
+           .front-face-card {
+              align-items: center !important;
+              text-align: center !important;
+              padding: var(--space-5) var(--space-4) !important;
            }
         }
       `}</style>

@@ -30,7 +30,7 @@ const Hero = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div style={{ textAlign: 'left' }}>
             <div 
-              className="badge" 
+              className="badge hero-badge-fix" 
               style={{ 
                 backgroundColor: 'rgba(192, 26, 26, 0.2)', 
                 color: 'var(--accent)',
@@ -112,6 +112,17 @@ const Hero = () => {
           0%, 20%, 50%, 80%, 100% { transform: translateY(0) translateX(-50%); }
           40% { transform: translateY(-20px) translateX(-50%); }
           60% { transform: translateY(-10px) translateX(-50%); }
+        }
+        @media (max-width: 768px) {
+          .hero-badge-fix {
+            display: block !important;
+            width: fit-content;
+            margin-left: auto !important;
+            margin-right: auto !important;
+            text-align: center !important;
+            padding-left: 12px !important;
+            padding-right: 12px !important;
+          }
         }
       `}</style>
     </section>
