@@ -12,7 +12,7 @@ const About = () => {
           <p>Comprometidos con la excelencia y la satisfacción de nuestros clientes en la industria de la construcción.</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+        <div className="grid about-mobile-fix gap-8 mb-8">
           {/* Misión */}
           <div className="card" style={{ border: '1px solid var(--accent)', position: 'relative', overflow: 'hidden', height: '100%' }}>
             <div style={{ position: 'absolute', top: 0, left: 0, width: '4px', height: '100%', backgroundColor: 'var(--accent)' }}></div>
@@ -76,6 +76,18 @@ const About = () => {
           </ul>
         </div>
       </div>
+      <style>{`
+        .about-mobile-fix {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        @media (max-width: 768px) {
+          .about-mobile-fix {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-8);
+          }
+        }
+      `}</style>
     </section>
   );
 };
