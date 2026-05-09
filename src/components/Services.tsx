@@ -62,7 +62,7 @@ const Services = () => {
           <p>Ofrecemos pruebas y análisis precisos para cada etapa de tu construcción, con tecnología calibrada y personal experto.</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="services-grid gap-6">
           {services.map((service, index) => (
             <div 
               key={index} 
@@ -181,7 +181,19 @@ const Services = () => {
            padding: var(--space-6);
         }
         
+        .services-grid {
+           display: grid;
+           grid-template-columns: repeat(4, 1fr);
+        }
+        @media (max-width: 1024px) {
+           .services-grid {
+              grid-template-columns: repeat(2, 1fr);
+           }
+        }
         @media (max-width: 768px) {
+           .services-grid {
+              grid-template-columns: repeat(1, 1fr);
+           }
            /* Ajuste para pantallas pequeñas (móviles) */
            .feature-back-pad {
               padding: var(--space-5) var(--space-4);
