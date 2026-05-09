@@ -44,7 +44,7 @@ const Header = () => {
     <header style={headerStyle}>
       <div className="container flex justify-between items-center">
         {/* Logo */}
-        <a href="#" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }} onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
+        <a href="#" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }} onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); setMobileMenuOpen(false); }}>
           <div style={{ fontSize: '1.25rem', fontWeight: 900, color: 'var(--text-heading)', display: 'inline-block' }}>
             <LogoText /><span style={{ fontSize: '1.4em', color: 'var(--accent)', marginLeft: '2px', lineHeight: 1 }}>.</span>
           </div>
@@ -82,6 +82,23 @@ const Header = () => {
         </button>
       </div>
 
+      {/* Mobile Menu Overlay */}
+      {mobileMenuOpen && (
+        <div 
+          style={{
+            position: 'absolute', 
+            top: '100%', 
+            left: 0, 
+            right: 0, 
+            height: '100vh',
+            backgroundColor: 'rgba(0, 0, 0, 0.6)',
+            zIndex: 99,
+            backdropFilter: 'blur(2px)',
+          }}
+          onClick={() => setMobileMenuOpen(false)}
+        />
+      )}
+
       {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div style={{
@@ -90,7 +107,8 @@ const Header = () => {
           padding: 'var(--space-4)',
           boxShadow: 'var(--shadow-md)',
           display: 'flex', flexDirection: 'column', gap: 'var(--space-4)',
-          borderTop: '1px solid var(--border-color)'
+          borderTop: '1px solid var(--border-color)',
+          zIndex: 100,
         }}>
           {navLinks.map((link) => (
             <a 
